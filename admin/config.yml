@@ -3,12 +3,28 @@
 # Replace the placeholder lines between the two marker lines below with that snippet.
 
 # >>> PASTE YOUR DECAPBRIDGE BACKEND BELOW (replace these placeholder lines) >>>
+# Use DecapBridge classic auth (required)
 backend:
   name: git-gateway
-  repo: YOUR-USERNAME/sierra-site
+  repo: natiraz/sierrafunctionalmd
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/YOUR-SITE-ID
+  identity_url: https://auth.decapbridge.com/sites/a0a66596-ee80-43cc-8828-b28254d21df0
   gateway_url: https://gateway.decapbridge.com
+
+  # See who did what (optional)
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Add site links in Decap CMS (optional)
+site_url: https://sierrafunctionalmd.pages.dev
 # <<< END DECAPBRIDGE BACKEND — keep everything below this line unchanged <<<
 
 media_folder: "assets/uploads"
