@@ -5,9 +5,9 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/sierra-site      # CHANGE THIS to your GitHub username + repo
+  repo: natiraz/sierrafunctionalmd     # CHANGE THIS to your GitHub username + repo
   branch: main
-  base_url: https://YOUR-SITE-ADDRESS         # CHANGE THIS to your live site address (e.g. https://sierra-site.pages.dev)
+  base_url: https://sierrafunctionalmd.pages.dev/         # CHANGE THIS to your live site address (e.g. https://sierra-site.pages.dev)
 
 # Where uploaded images would go (not used yet, but required)
 media_folder: "assets/uploads"
