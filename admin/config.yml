@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/sierra-site   # CHANGE THIS to your GitHub username + repo
+  repo: natiraz/sierrafunctionalmd   # CHANGE THIS to your GitHub username + repo
   branch: main
   base_url: https://sierrafunctionalmd.pages.dev
 
