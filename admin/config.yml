@@ -1,36 +1,212 @@
-# ============================================================
-#  Sierra Functional Medicine — editor settings
-#  You only need to change the two lines marked "CHANGE THIS".
-# ============================================================
+# Sierra Functional Medicine — editor settings
+# Change only the repo line below if needed.
 
 backend:
   name: github
-  repo: natiraz/sierrafunctionalmd     # CHANGE THIS to your GitHub username + repo
+  repo: YOUR-GITHUB-USERNAME/sierra-site   # CHANGE THIS to your GitHub username + repo
   branch: main
-  base_url: https://sierrafunctionalmd.pages.dev/         # CHANGE THIS to your live site address (e.g. https://sierra-site.pages.dev)
+  base_url: https://sierrafunctionalmd.pages.dev
 
-# Where uploaded images would go (not used yet, but required)
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-# The friendly boxes Babak sees when he logs in
 collections:
-  - name: "content"
-    label: "Website text"
+  - name: content
+    label: Website text
     delete: false
     files:
-      - name: "general"
-        label: "Text you can edit"
-        file: "content/content.json"
+      - name: home
+        label: "Home page"
+        file: "content/home.json"
         fields:
-          - { label: "Homepage subheading", name: "hero_sub", widget: "text" }
-          - { label: "Phone number", name: "phone", widget: "string" }
-          - { label: "Address — line 1", name: "address1", widget: "string" }
-          - { label: "Address — line 2", name: "address2", widget: "string" }
-          - { label: "Office hours", name: "hours", widget: "string" }
-          - { label: "Contact page intro", name: "contact_intro", widget: "text" }
-          - { label: "Fee — under 65 (number only)", name: "fee_u65", widget: "string" }
-          - { label: "Fee — 65 and over (number only)", name: "fee_o65", widget: "string" }
-          - { label: "About — paragraph 1", name: "bio1", widget: "text" }
-          - { label: "About — paragraph 2", name: "bio2", widget: "text" }
-          - { label: "About — paragraph 3", name: "bio3", widget: "text" }
+          - { label: "Hero label", name: hero_eyebrow, widget: string }
+          - { label: "Hero headline (start)", name: hero_h_a, widget: string }
+          - { label: "Hero headline (emphasis)", name: hero_h_b, widget: string }
+          - { label: "Hero subheading", name: hero_sub, widget: text }
+          - { label: "Trust badge 1", name: trust1, widget: string }
+          - { label: "Trust badge 2", name: trust2, widget: string }
+          - { label: "Trust badge 3", name: trust3, widget: string }
+          - { label: "Affiliations label", name: ribbon_lab, widget: string }
+          - { label: "Affiliation 1", name: ribbon1, widget: string }
+          - { label: "Affiliation 2", name: ribbon2, widget: string }
+          - { label: "Affiliation 3", name: ribbon3, widget: string }
+          - { label: "Affiliation 4", name: ribbon4, widget: string }
+          - { label: "Affiliation 5", name: ribbon5, widget: string }
+          - { label: "Approach label", name: approach_eyebrow, widget: string }
+          - { label: "Approach heading (start)", name: approach_h_a, widget: string }
+          - { label: "Approach heading (emphasis)", name: approach_h_b, widget: string }
+          - { label: "Approach intro", name: approach_intro, widget: text }
+          - { label: "Integrative — small label", name: integ_h3, widget: string }
+          - { label: "Integrative — headline", name: integ_big, widget: string }
+          - { label: "Integrative — description", name: integ_p, widget: text }
+          - { label: "Functional — small label", name: func_h3, widget: string }
+          - { label: "Functional — headline", name: func_big, widget: string }
+          - { label: "Functional — description", name: func_p, widget: text }
+          - { label: "Approach pull-quote", name: approach_quote, widget: string }
+          - { label: "How-it-works label", name: how_eyebrow, widget: string }
+          - { label: "How-it-works heading (start)", name: how_h_a, widget: string }
+          - { label: "How-it-works heading (emphasis)", name: how_h_b, widget: string }
+          - { label: "Step 1 label", name: step1_num, widget: string }
+          - { label: "Step 1 title", name: step1_h, widget: string }
+          - { label: "Step 1 text", name: step1_p, widget: text }
+          - { label: "Step 2 label", name: step2_num, widget: string }
+          - { label: "Step 2 title", name: step2_h, widget: string }
+          - { label: "Step 2 text", name: step2_p, widget: text }
+          - { label: "Step 3 label", name: step3_num, widget: string }
+          - { label: "Step 3 title", name: step3_h, widget: string }
+          - { label: "Step 3 text", name: step3_p, widget: text }
+          - { label: "Conditions label", name: cond_eyebrow, widget: string }
+          - { label: "Conditions heading (start)", name: cond_h_a, widget: string }
+          - { label: "Conditions heading (emphasis)", name: cond_h_b, widget: string }
+          - { label: "Conditions intro", name: cond_intro, widget: text }
+          - { label: "Services label", name: svc_eyebrow, widget: string }
+          - { label: "Services heading (start)", name: svc_h_a, widget: string }
+          - { label: "Services heading (emphasis)", name: svc_h_b, widget: string }
+          - { label: "Pillar 1 title", name: pill1_h, widget: string }
+          - { label: "Pillar 1 text", name: pill1_p, widget: text }
+          - { label: "Pillar 2 title", name: pill2_h, widget: string }
+          - { label: "Pillar 2 text", name: pill2_p, widget: text }
+          - { label: "Pillar 3 title", name: pill3_h, widget: string }
+          - { label: "Pillar 3 text", name: pill3_p, widget: text }
+      - name: conditions
+        label: "Conditions page"
+        file: "content/conditions.json"
+        fields:
+          - { label: "Lyme Disease & Co-Infections — title", name: lyme_title, widget: string }
+          - { label: "Lyme Disease & Co-Infections — summary line", name: lyme_face, widget: text }
+          - { label: "Lyme Disease & Co-Infections — description", name: lyme_body, widget: text }
+          - { label: "Mold & Mycotoxin Illness — title", name: mold_title, widget: string }
+          - { label: "Mold & Mycotoxin Illness — summary line", name: mold_face, widget: text }
+          - { label: "Mold & Mycotoxin Illness — description", name: mold_body, widget: text }
+          - { label: "Long COVID — title", name: long-covid_title, widget: string }
+          - { label: "Long COVID — summary line", name: long-covid_face, widget: string }
+          - { label: "Long COVID — description", name: long-covid_body, widget: text }
+          - { label: "Chronic Fatigue & Fibromyalgia — title", name: chronic-fatigue_title, widget: string }
+          - { label: "Chronic Fatigue & Fibromyalgia — summary line", name: chronic-fatigue_face, widget: text }
+          - { label: "Chronic Fatigue & Fibromyalgia — description", name: chronic-fatigue_body, widget: text }
+          - { label: "Mast Cell Activation Syndrome — title", name: mcas_title, widget: string }
+          - { label: "Mast Cell Activation Syndrome — summary line", name: mcas_face, widget: text }
+          - { label: "Mast Cell Activation Syndrome — description", name: mcas_body, widget: text }
+          - { label: "Autoimmune Disease — title", name: autoimmune_title, widget: string }
+          - { label: "Autoimmune Disease — summary line", name: autoimmune_face, widget: string }
+          - { label: "Autoimmune Disease — description", name: autoimmune_body, widget: text }
+          - { label: "Metabolic & Cardiovascular Health — title", name: metabolic_title, widget: string }
+          - { label: "Metabolic & Cardiovascular Health — summary line", name: metabolic_face, widget: string }
+          - { label: "Metabolic & Cardiovascular Health — description", name: metabolic_body, widget: text }
+          - { label: "Digestive Health — title", name: digestive_title, widget: string }
+          - { label: "Digestive Health — summary line", name: digestive_face, widget: text }
+          - { label: "Digestive Health — description", name: digestive_body, widget: text }
+          - { label: "Brain Health — title", name: brain-health_title, widget: string }
+          - { label: "Brain Health — summary line", name: brain-health_face, widget: string }
+          - { label: "Brain Health — description", name: brain-health_body, widget: text }
+          - { label: "Men's Health & Optimization — title", name: mens-health_title, widget: string }
+          - { label: "Men's Health & Optimization — summary line", name: mens-health_face, widget: text }
+          - { label: "Men's Health & Optimization — description", name: mens-health_body, widget: text }
+          - { label: "Integrative Oncology — title", name: oncology_title, widget: string }
+          - { label: "Integrative Oncology — summary line", name: oncology_face, widget: text }
+          - { label: "Integrative Oncology — description", name: oncology_body, widget: text }
+          - { label: "Label", name: co_eyebrow, widget: string }
+          - { label: "Page heading (start)", name: co_h_a, widget: string }
+          - { label: "Page heading (emphasis)", name: co_h_b, widget: string }
+          - { label: "Page intro", name: co_intro, widget: text }
+      - name: services
+        label: "Services page"
+        file: "content/services.json"
+        fields:
+          - { label: "IV — IV Vitamin C (name)", name: ivc_n, widget: string }
+          - { label: "IV — IV Vitamin C (description)", name: ivc_d, widget: text }
+          - { label: "IV — Glutathione (name)", name: glut_n, widget: string }
+          - { label: "IV — Glutathione (description)", name: glut_d, widget: text }
+          - { label: "IV — B-Vitamins (name)", name: bvit_n, widget: string }
+          - { label: "IV — B-Vitamins (description)", name: bvit_d, widget: text }
+          - { label: "IV — Phosphatidylcholine (name)", name: pc_n, widget: string }
+          - { label: "IV — Phosphatidylcholine (description)", name: pc_d, widget: text }
+          - { label: "IV — NAD (name)", name: nad_n, widget: string }
+          - { label: "IV — NAD (description)", name: nad_d, widget: text }
+          - { label: "IV — IV Chelation (name)", name: chel_n, widget: string }
+          - { label: "IV — IV Chelation (description)", name: chel_d, widget: text }
+          - { label: "IV — IV Ketamine (name)", name: ket_n, widget: string }
+          - { label: "IV — IV Ketamine (description)", name: ket_d, widget: text }
+          - { label: "Label", name: sv_eyebrow, widget: string }
+          - { label: "Page heading (start)", name: sv_h_a, widget: string }
+          - { label: "Page heading (emphasis)", name: sv_h_b, widget: string }
+          - { label: "Page intro", name: sv_intro, widget: text }
+          - { label: "Functional Medicine — heading", name: fm_h, widget: string }
+          - { label: "Functional Medicine — text", name: fm_p, widget: text }
+          - { label: "IV Therapies — heading", name: iv_h, widget: string }
+          - { label: "IV Therapies — intro", name: iv_p, widget: text }
+          - { label: "Direct Primary Care — heading", name: dpc_h, widget: string }
+          - { label: "Direct Primary Care — text", name: dpc_p, widget: text }
+          - { label: "Fee — under 65 (number)", name: fee_u65, widget: string }
+          - { label: "Fee — 65 and over (number)", name: fee_o65, widget: string }
+          - { label: "Fees — note", name: fee_note, widget: text }
+      - name: about
+        label: "About page"
+        file: "content/about.json"
+        fields:
+          - { label: "Label", name: ab_eyebrow, widget: string }
+          - { label: "Page heading (start)", name: ab_h_a, widget: string }
+          - { label: "Page heading (emphasis)", name: ab_h_b, widget: string }
+          - { label: "Intro line", name: ab_sub, widget: text }
+          - { label: "Credentials line", name: ab_cred, widget: text }
+          - { label: "Bio paragraph 1", name: bio1, widget: text }
+          - { label: "Bio paragraph 2", name: bio2, widget: text }
+          - { label: "Bio paragraph 3", name: bio3, widget: text }
+          - { label: "Pull-quote", name: ab_quote, widget: text }
+          - { label: "Credential 1", name: cred1, widget: text }
+          - { label: "Credential 2", name: cred2, widget: text }
+          - { label: "Credential 3", name: cred3, widget: text }
+          - { label: "Credential 4", name: cred4, widget: string }
+          - { label: "Credential 5", name: cred5, widget: string }
+      - name: faq
+        label: "FAQ page"
+        file: "content/faq.json"
+        fields:
+          - { label: "Question", name: q1, widget: string }
+          - { label: "Answer", name: q1_a, widget: text }
+          - { label: "Question", name: q2, widget: string }
+          - { label: "Answer", name: q2_a, widget: text }
+          - { label: "Question", name: q3, widget: string }
+          - { label: "Answer", name: q3_a, widget: text }
+          - { label: "Question", name: q4, widget: string }
+          - { label: "Answer", name: q4_a, widget: text }
+          - { label: "Question", name: q5, widget: string }
+          - { label: "Answer", name: q5_a, widget: text }
+          - { label: "Question", name: q6, widget: string }
+          - { label: "Answer", name: q6_a, widget: text }
+          - { label: "Question", name: q7, widget: string }
+          - { label: "Answer", name: q7_a, widget: text }
+          - { label: "Question", name: q8, widget: string }
+          - { label: "Answer", name: q8_a, widget: string }
+          - { label: "Question", name: q9, widget: string }
+          - { label: "Answer", name: q9_a, widget: text }
+          - { label: "Question", name: q10, widget: string }
+          - { label: "Answer", name: q10_a, widget: text }
+          - { label: "Label", name: fq_eyebrow, widget: string }
+          - { label: "Page heading (start)", name: fq_h_a, widget: string }
+          - { label: "Page heading (emphasis)", name: fq_h_b, widget: string }
+          - { label: "Page intro", name: fq_sub, widget: text }
+      - name: contact
+        label: "Contact page"
+        file: "content/contact.json"
+        fields:
+          - { label: "Label", name: ct_eyebrow, widget: string }
+          - { label: "Page heading (start)", name: ct_h_a, widget: string }
+          - { label: "Page heading (emphasis)", name: ct_h_b, widget: string }
+          - { label: "Page intro", name: ct_sub, widget: text }
+          - { label: "Small label", name: ct_start, widget: string }
+          - { label: "Section heading", name: ct_h2, widget: string }
+          - { label: "Intro paragraph", name: ct_intro, widget: text }
+          - { label: "Address line 1", name: address1, widget: string }
+          - { label: "Address line 2", name: address2, widget: string }
+          - { label: "Phone number", name: phone, widget: string }
+          - { label: "Office hours", name: hours, widget: string }
+      - name: common
+        label: "Shared (footer & buttons)"
+        file: "content/common.json"
+        fields:
+          - { label: "Footer — emergency notice (bold)", name: foot_disc_strong, widget: string }
+          - { label: "Footer — legal text", name: foot_disc_rest, widget: text }
+          - { label: "Call-to-action heading (start)", name: cta_head_a, widget: string }
+          - { label: "Call-to-action heading (emphasis)", name: cta_head_b, widget: string }
+          - { label: "Call-to-action text", name: cta_text, widget: text }
