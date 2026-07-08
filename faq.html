@@ -12,6 +12,7 @@
 <style>
 
 
+
   :root{
     --bg:#131f19;
     --bg-2:#17251e;
@@ -475,6 +476,16 @@
 
   var form=document.getElementById('contactForm'); var msg=document.getElementById('formMsg');
   if(form){ form.addEventListener('submit',function(e){ e.preventDefault(); var data=new URLSearchParams(new FormData(form)).toString(); fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data}).then(function(){ form.reset(); msg.textContent='Thank you \u2014 your request has been sent. Dr. Kanani\u2019s office will be in touch shortly.'; msg.classList.add('show'); }).catch(function(){ msg.textContent='Preview mode: once this site is deployed, this form will send straight to the office. (Nothing was sent just now.)'; msg.classList.add('show'); }); }); }
+})();
+
+</script>
+<script>
+
+(function(){
+  var nodes=document.querySelectorAll('[data-cms]'); if(!nodes.length) return;
+  fetch('content/content.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    nodes.forEach(function(el){ var k=el.getAttribute('data-cms'); if(d[k]!=null && d[k]!=='') el.textContent=d[k]; });
+  }).catch(function(){});
 })();
 
 </script>
