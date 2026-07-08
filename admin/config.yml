@@ -1,11 +1,15 @@
-# Sierra Functional Medicine — editor settings
-# Change only the repo line below if needed.
+# Sierra Functional Medicine — editor settings (DecapBridge login)
+# After you create your site on DecapBridge, it shows you a 'backend:' snippet.
+# Replace the placeholder lines between the two marker lines below with that snippet.
 
+# >>> PASTE YOUR DECAPBRIDGE BACKEND BELOW (replace these placeholder lines) >>>
 backend:
-  name: github
-  repo: natiraz/sierrafunctionalmd   # CHANGE THIS to your GitHub username + repo
+  name: git-gateway
+  repo: YOUR-USERNAME/sierra-site
   branch: main
-  base_url: https://sierrafunctionalmd.pages.dev
+  identity_url: https://auth.decapbridge.com/sites/YOUR-SITE-ID
+  gateway_url: https://gateway.decapbridge.com
+# <<< END DECAPBRIDGE BACKEND — keep everything below this line unchanged <<<
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
